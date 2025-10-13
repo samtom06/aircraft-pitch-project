@@ -59,13 +59,18 @@ Each run prints results as **PASS** or **FAIL** based on these criteria.
 ## File Overview
 
 aircraft-pitch-project/
-├── common.py # Helper functions
-├── simulate.py # Baseline pitch model
-├── sweep.py # Parameter sweep
-├── monte_carlo.py # Robustness simulation
-├── specs.py # Requirements and parameters
-├── requirements.txt # Dependencies
+├── common.py            # Helper functions
+├── simulate.py          # Baseline pitch model
+├── sweep.py             # Parameter sweep
+├── monte_carlo.py       # Robustness simulation
+├── specs.py             # Requirements and parameters
+├── requirements.txt     # Dependencies
+├── figs/                # Result plots
+│   ├── step_response.png
+│   ├── heatmap_overshoot.png
+│   └── heatmap_settling.png
 └── README.md
+
 
 
 ---
