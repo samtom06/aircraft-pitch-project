@@ -58,6 +58,7 @@ Each run prints results as **PASS** or **FAIL** based on these criteria.
 
 ## File Overview
 
+```
 aircraft-pitch-project/
 ├── common.py            # Helper functions
 ├── simulate.py          # Baseline pitch model
@@ -70,6 +71,8 @@ aircraft-pitch-project/
 │   ├── heatmap_overshoot.png
 │   └── heatmap_settling.png
 └── README.md
+
+```
 
 
 
