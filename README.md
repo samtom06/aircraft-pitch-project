@@ -33,16 +33,14 @@ Time-domain metrics used to evaluate response:
 
 Performance limits are defined in `specs.py`:
 
-| Metric              | Requirement                                |
-|---------------------|---------------------------------------------|
-| Percent overshoot   | OS% ≤ REQ["max_os"]                         |
-| Settling time       | t_settle ≤ REQ["max_settle_s"]             |
-| Gain error          | |gain_error| ≤ REQ["max_sse"]              |
-
-
-
+| Metric             | Requirement                         |
+|--------------------|-------------------------------------|
+| Percent overshoot  | OS% ≤ REQ["max_os"]                 |
+| Settling time      | t_settle ≤ REQ["max_settle_s"]      |
+| Gain error         | \|gain_error\| ≤ REQ["max_sse"]     |
 
 Each run prints results as **PASS** or **FAIL** based on these criteria.
+
 
 ---
 
