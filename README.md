@@ -96,7 +96,6 @@ Increasing stiffness (k) reduces settling time. Higher damping (c) improves resp
   <img src="figs/heatmap_settling.png" width="600">
 </p>
 
----
 
 ## Setup
 
