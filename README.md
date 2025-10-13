@@ -110,6 +110,7 @@ Increasing stiffness (`k`) reduces settling time. Higher damping (`c`) improves 
 ### Robustness – Monte Carlo
 A Monte Carlo study was used to test performance under ±25% uncertainty in key parameters.
 
+```
 Output:
 
 Baseline:  
@@ -119,6 +120,8 @@ pass-rate = 100.0%   |  OS mean±std = 7.40 ± 3.31 %   |  t_settle = 0.31 ± 0.
 Improved:  
 
 pass-rate = 100.0%   |  OS mean±std = 6.66 ± 3.29 %   |  t_settle = 0.28 ± 0.03 s
+
+```
 
 These results show consistent stability and low variation under ±25% parameter uncertainty.
 
