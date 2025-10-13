@@ -75,7 +75,7 @@ aircraft-pitch-project/
 The proportional controller tracks the pitch command with low overshoot and fast settling.
 
 <p align="center">
-  <img src="figs/step_closed.png" width="600">
+  <img src="figs/step_response.png" width="600">
 </p>
 
 ---
@@ -84,7 +84,7 @@ The proportional controller tracks the pitch command with low overshoot and fast
 Lower damping (c) and stiffness (k) increase overshoot. Higher values improve stability but may slow the response.
 
 <p align="center">
-  <img src="figs/heatmap_os.png" width="600">
+  <img src="figs/heatmap_overshoot.png" width="600">
 </p>
 
 ---
@@ -93,7 +93,7 @@ Lower damping (c) and stiffness (k) increase overshoot. Higher values improve st
 Increasing stiffness (k) reduces settling time. Higher damping (c) improves response smoothness but can slow convergence if too large.
 
 <p align="center">
-  <img src="figs/heatmap_ts.png" width="600">
+  <img src="figs/heatmap_settling.png" width="600">
 </p>
 
 ---
