@@ -11,7 +11,7 @@ This project models aircraft pitch dynamics as a second-order system and verifie
 
 The aircraft pitch axis is modeled as a second-order spring–mass–damper system with a proportional control input:
 
-theta_ddot + 2*zeta*omega_n*theta_dot + omega_n^2*theta = K * u(t)
+`theta_ddot + 2*zeta*omega_n*theta_dot + omega_n^2*theta = K * u(t)`
 
 Where:
 
@@ -81,7 +81,7 @@ The proportional controller tracks the pitch command with low overshoot and fast
 ---
 
 ### Parameter Sensitivity – Overshoot
-Lower damping (c) and stiffness (k) increase overshoot. Higher values improve stability but may slow the response.
+Lower damping (`c`) and stiffness (`k`) increase overshoot. Higher values improve stability but may slow the response.
 
 <p align="center">
   <img src="figs/heatmap_overshoot.png" width="600">
@@ -90,12 +90,25 @@ Lower damping (c) and stiffness (k) increase overshoot. Higher values improve st
 ---
 
 ### Parameter Sensitivity – Settling Time
-Increasing stiffness (k) reduces settling time. Higher damping (c) improves response smoothness but can slow convergence if too large.
+Increasing stiffness (`k`) reduces settling time. Higher damping (`c`) improves smoothness but slows convergence if too large.
 
 <p align="center">
   <img src="figs/heatmap_settling.png" width="600">
 </p>
 
+---
+
+### Robustness – Monte Carlo
+A Monte Carlo study was used to test performance under ±25% uncertainty in key parameters.
+
+Output:
+
+Baseline:  pass-rate = 100.0%   |  OS mean±std = 7.40 ± 3.31 %   |  t_settle = 0.31 ± 0.03 s
+Improved:  pass-rate = 100.0%   |  OS mean±std = 6.66 ± 3.29 %   |  t_settle = 0.28 ± 0.03 s
+
+These results show consistent stability and low variation under ±25% parameter uncertainty.
+
+---
 
 ## Setup
 
