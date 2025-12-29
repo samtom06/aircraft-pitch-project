@@ -12,9 +12,9 @@ This project models aircraft pitch dynamics as a second-order rotational plant a
 ### Plant (pitch axis)
 The pitch axis is modeled as a 2nd-order rotational system:
 
-\[
+$$
 I_{yy}\,\ddot{\theta} + c\,\dot{\theta} + k\,\theta = K_{act}\,u(t)
-\]
+$$
 
 - \(\theta(t)\): pitch angle (rad)  
 - \(I_{yy}\): pitch inertia (kg·m²)  
@@ -26,12 +26,13 @@ I_{yy}\,\ddot{\theta} + c\,\dot{\theta} + k\,\theta = K_{act}\,u(t)
 ### Controller (PI)
 Tracking a commanded pitch step \(\theta_{cmd}\) using a PI controller:
 
-\[
+$$
 e(t) = \theta_{cmd}(t) - \theta(t)
-\]
-\[
+$$
+
+$$
 u(t) = K_p\,e(t) + K_i \int_0^t e(\tau)\,d\tau
-\]
+$$
 
 ---
 
@@ -74,6 +75,8 @@ Example closed-loop step metrics (from `python specs.py`):
 - Clean, scriptable workflow for technical presentations
 
 ---
+
+
 
 ## Repository Structure
 
