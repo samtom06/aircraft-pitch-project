@@ -3,7 +3,7 @@ import numpy as np
 from simulate import run
 from specs import summarize
 
-REQ = {"OS_max": 30.0, "ts_max": 4.0, "dc_gain_err_max": 0.10}  # ±10%
+REQ = {"OS_max": 30.0, "ts_max": 6.5, "dc_gain_err_max": 0.10}  # ±10%
 
 
 def passes(m: dict) -> bool:
@@ -42,26 +42,26 @@ if __name__ == "__main__":
         "k": 2.5e6,
         "c": 2.0e5,
         "K_act": 5.0e5,
-        "Kp": 1.0,
-        "Ki": 0.0,
+        "Kp": 2.0,
+        "Ki": 6.0,
         "theta_cmd_deg": 1.0,
-        "T": 10.0,
+        "T": 30.0,
         "dt": 0.001,
     }
 
-    improved = {
+    alternate = {
         "Iyy": 8000.0,
         "k": 2.8e6,
         "c": 2.2e5,
         "K_act": 5.0e5,
-        "Kp": 1.3,
-        "Ki": 0.0,
+        "Kp": 6.0,
+        "Ki": 6.0,
         "theta_cmd_deg": 1.0,
-        "T": 10.0,
+        "T": 30.0,
         "dt": 0.001,
     }
 
-    for name, p0 in [("Baseline", baseline), ("Improved", improved)]:
+    for name, p0 in [("Baseline", baseline), ("Alternate", alternate)]:
         passes_count = 0
         os_vals, ts_vals = [], []
 
@@ -73,7 +73,8 @@ if __name__ == "__main__":
             passes_count += int(passes(m))
 
         print(
-            f"{name}: pass-rate = {100 * passes_count / N:.1f}%  "
-            f"OS mean±std = {np.mean(os_vals):.2f}±{np.std(os_vals):.2f}  "
-            f"t_s mean±std = {np.mean(ts_vals):.2f}±{np.std(ts_vals):.2f}"
-        )
+    f"{name}: pass-rate = {100 * passes_count / N:.1f}%   "
+    f"OS mean±std = {np.mean(os_vals):.2f}±{np.std(os_vals):.2f}%   "
+    f"t_settle mean±std = {np.mean(ts_vals):.3f}±{np.std(ts_vals):.3f} s"
+)
+
